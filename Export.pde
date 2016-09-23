@@ -1,5 +1,9 @@
 void exportWorld(String filename) {
-  PrintWriter output = createWriter("exports/" + filename + ".world");
+  D = cells.length;
+  H = cells[0].length;
+  W = cells[0][0].length;
+  
+  PrintWriter output = createWriter("worlds/" + filename + ".world");
   output.println(W + ";" + H + ";" + D);
   
   for (int x = 0; x < W; x++) {

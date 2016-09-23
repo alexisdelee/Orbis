@@ -1,19 +1,11 @@
 public class Cell {
   boolean alive;
-  color[] colors;
+  color c;
+  float distanceFromOrigin;
 
-  public Cell(boolean _alive, color[] _colors) {
+  public Cell(boolean _alive, color _color, float _distance) {
     this.alive = _alive;
-    this.colors = _colors;
-  }
-
-  public color[] getColors() {
-    return this.colors;
-  }
-
-  public void setUniformColor(color c) {
-    for (int i = 0; i < 6; i++) {
-      this.colors[i] = c;
-    }
+    this.c = _color;
+    this.distanceFromOrigin = _distance;
   }
 }

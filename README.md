@@ -8,7 +8,7 @@ Pour cela, nous avons utilisé __Processing__.
 - une naissance a lieu lorsque l'environnement est favorable (exactement ***n*** voisins sont vivants)
 - la mort intervient par isolement avec moins de ***m*** voisins vivants ou par surpopulation avec plus de ***p*** voisins vivants
 
-*n, p et m sont des variables configurables.*
+*n, m et p sont des variables configurables.*
 
 ## Fonctionnalités
 
@@ -29,11 +29,20 @@ Changer la valeur en __true__ de la variable ``debugMode`` :
 ```java
 boolean debugMode = true;
 ```
-Puis taper sur ``ESPACE`` pour avancer d'une itération.
+Puis taper sur ``ESPACE`` pour avancer d'une itération à chaque fois.
+
+### Activer le mode screenshot
+
+Changer la valeur en __true__ de la variable ``screenshotMode`` :
+```java
+boolean screenshotMode = true;
+```
+
+Il sauvegardera une image par itération dans le dossier "screenshots";
 
 ### Modifier les conditions de vie et de mort
 
-Le tableau ``rules`` contient dans l'ordre : apparition de la vie, limite mort par isolation, limite mort par surpopulation.
+Le tableau ``rules`` contient dans l'ordre : apparition de la vie, limite "mort par isolation", limite "mort par surpopulation".
 
 ### Modifier la taille des cubes
 
@@ -63,8 +72,10 @@ importWorld("test");
 
 ## Remarque
 
-Aide par ligne pour la synthaxe du fichier ``file.world`` :
+Aide par ligne pour la syntaxe du fichier ``file.world`` :
 - coordonnées x, y et z séparées par un ``;``
 - 0 ou 1 séparés par un ``,``
-- le prochain fichier à importer ``nextWorld = test2``
-- le nombre d'itérations avant l'import du nouveau fichier ``duration = 30``
+- le prochain fichier à importer ``nextWorld = test2`` *(facultatif)*
+- le nombre d'itérations avant l'import du nouveau fichier ``duration = 30`` ou ``duration = auto`` pour attendre des motifs stables
+- la distance entre la caméra et l'objectif ``cameraDistance = 300`` *(facultatif)*
+- permettre l'apparition de figures aléatoires ``random = true`` *(facultatif)*
