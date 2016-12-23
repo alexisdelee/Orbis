@@ -4,7 +4,7 @@ PVector origin; // Origin from where the cubes are drawn
 PVector cameraRotation; // Camera rotation around origin point
 float cameraDistance = 300.0f; // Camera distance from origin point
 float lightsDistance = 1000.0f;
-int timerMax = 3;
+int timerMax = 4;
 int timer = timerMax;
 boolean debugMode = false;
 boolean screenshotMode = false;

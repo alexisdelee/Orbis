@@ -3,6 +3,8 @@
 Simulation 3D d'un automate cellulaire (jeu de la vie, Conway) en __``JAVA ``__.
 Pour cela, nous avons utilisé __Processing__.
 
+![Orbis](/screenshots/276.png "Orbis")
+
 ## Règles
 
 - une naissance a lieu lorsque l'environnement est favorable (exactement ***n*** voisins sont vivants)
